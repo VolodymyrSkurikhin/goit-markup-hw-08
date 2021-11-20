@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+  <!--Шапка сайта-->
+  <header class="header">
+    <div class="header-flex container">
+      <nav class="header-flex">
+        <a href="/" class="logo header__logo" lang="en">
+          <span class="logo__start">Web</span>
+          <span class="logo__end logo__end--header">Studio</span>
+        </a>
+        <ul class="site-nav list">
+          <li class="site-nav__item">
+            <a href="./index.html" class="site-nav__link site-nav__link--act">Портфолио
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a href="/" class="site-nav__link">Студия
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a href="" class="site-nav__link">Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="mail-tel list">
+        <li class="mail-tel__item">
+          <a href="mailto:info@devsudio.com" class="mail-tel__link">
+            <svg class="mail-tel__icon">
+              <use href="./images/sprite.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com
+          </a>
+        </li>
+        <li class="mail-tel__item">
+          <a href="tel:+380961111111" class="mail-tel__link">
+            <svg class="mail-tel__icon mail-tel__icon--size">
+              <use href="./images/sprite.svg#icon-smartphone"></use>
+            </svg>+38 096 111 11 11</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class=" portfolio-main">
+    <section class="portfolio-section">
+      <div class="container">
+        <h1 class="visually-hidden">Projects</h1>
+      <!-- Фильтр -->
+        <ul class="filter-flex list">
+          <li class="filter-flex__item">
+            <button type="button" class="but-act">Все</button>
+          </li>
+          <li class="filter-flex__item">
+            <button type="button" class="but">Веб-сайты</button>
+          </li>
+          <li class="filter-flex__item">
+            <button type="button" class="but">Приложения</button>
+          </li>
+          <li class="filter-flex__item">
+            <button type="button" class="but">Дизайн</button>
+          </li>
+          <li class="filter-flex__item">
+            <button type="button" class="but">Маркетинг</button>
+          </li>
+        </ul>
+      <!-- Проекты -->
+        <ul class="project-portf list">
+          <li class="project-portf__item">
+          <a href="" class="project-portf__link">
+            <div class="project-portf__overlay">
+              <img src="./images/techno.jpg" alt="лидеры технокряка" width="370">
+              <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, recusandae quos! Deserunt, ut! Distinctio voluptatibus libero dolorum ullam, odit ut veritatis quo optio vel similique repellendus voluptate quisquam doloremque perspiciatis!
+              </p>
+            </div>
+            <div class="project-portf__descr">
+              <h2 class="project-portf__title">Технокряк</h2>
+              <p class="project-portf__kind">Веб-сайт</p>
+            </div>
+            </a>
+          </li>
+          <li class="project-portf__item">
+            <a href="" class="project-portf__link">
+              <div class="project-portf__overlay">
+                <img src="./images/no-vs-gs.jpg" alt="баскетболисты" width="370">
+                <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
+                </p>
+              </div>
+              <div class="project-portf__descr">
+                <h2 class="project-portf__title">Постер New Orlean vs Golden Star</h2>
+                <p class="project-portf__kind">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-portf__item">
+            <a href="" class="project-portf__link">
+              <div class="project-portf__overlay">
+                <img src="./images/seafood.jpg" alt="логотип-ресторана" width="370">
+                <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
+                </p>
+              </div>
+              <div class="project-portf__descr">
+                <h2 class="project-portf__title">Ресторан Seafood</h2>
+                <p class="project-portf__kind">Приложение</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-portf__item">
+            <a href="" class="project-portf__link">
+              <div class="project-portf__overlay">
+                <img src="./images/prime.jpg" alt="наушники" width="370">
+                <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
+                </p>
+              </div>
+              <div class="project-portf__descr">
+                <h2 class="project-portf__title">Проект Prime</h2>
+                <p class="project-portf__kind">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-portf__item">
+            <a href="" class="project-portf__link">
+              <div class="project-portf__overlay">
+                <img src="./images/boxes.jpg" alt="две-коробки" width="370">
+                <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
+                </p>
+              </div>
+              <div class="project-portf__descr">
+                <h2 class="project-portf__title">Проект Boxes</h2>
+                <p class="project-portf__kind">Приложение</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-portf__item">
+            <a href="" class="project-portf__link">
+              <div class="project-portf__overlay">
+                <img src="./images/inspiration.jpg" alt="монитор" width="370">
+                <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
+                </p>
+              </div>
+              <div class="project-portf__descr">
+                <h2 class="project-portf__title">Inspiration has no Borders</h2>
+                <p class="project-portf__kind">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-portf__item">
+            <a href="" class="project-portf__link">
+              <div class="project-portf__overlay">
+                <img src="./images/edition.jpg" alt="книга" width="370">
+                <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
+                </p>
+              </div>
+              <div class="project-portf__descr">
+                <h2 class="project-portf__title">Издание Limited Edition</h2>
+                <p class="project-portf__kind">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-portf__item">
+            <a href="" class="project-portf__link">
+              <div class="project-portf__overlay">
+                <img src="./images/lab.jpg" alt="этикетка" width="370">
+                <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
+                </p>
+              </div>
+              <div class="project-portf__descr">
+                <h2 class="project-portf__title">Проект LAB</h2>
+                <p class="project-portf__kind">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="project-portf__item">
+            <a href="" class="project-portf__link">
+              <div class="project-portf__overlay">
+                <img src="./images/business.jpg" alt="ноутбук" width="370">
+                <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
+                </p>
+              </div>
+              <div class="project-portf__descr">
+                <h2 class="project-portf__title">Growing Business</h2>
+                <p class="project-portf__kind">Приложение</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <!--Футер-->
+  <footer class="footer">
+    <div class="footer-flex container">
+      <div class="footer-left">
+        <a href="/" class="logo footer__logo" lang="en"><span class="logo__start">Web</span> <span
+            class="logo__end logo__end--footer">Studio</span></a>
+        <address class="address">
+          <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+          <ul class="footer-list list">
+            <li><a href="mailto:info@example.com" class="footer-list__item">info@example.com</a></li>
+            <li><a href="tel:+380991111111" class="footer-list__item">+38 099 111 11 11</a></li>
+          </ul>
+        </address>
+      </div>
+      <div class="footer-center">
+        <h3 class="footer-center__title">Присоединяйтесь</h3>
+        <ul class="social-list list">
+          <li class="social-list__item">
+            <a href="" class="social-list__link social-list__link--footer">
+              <svg class="social-list__icon social-list__icon__footer">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="" class="social-list__link social-list__link--footer">
+              <svg class="social-list__icon social-list__icon__footer">
+                <use href="./images/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="" class="social-list__link social-list__link--footer">
+              <svg class="social-list__icon social-list__icon__footer">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="" class="social-list__link social-list__link--footer">
+              <svg class="social-list__icon social-list__icon__footer">
+                <use href="./images/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <label for="footer-invite" class="footer-invite footer-center__title">Подпишитесь на рассылку</label>
+        <div class="footer-invite-thumb">
+          <input type="email" id="footer-invite" required placeholder="E-mail" class="footer-invite-email">
+          <button type="submit" class="send-btn button">
+            Подписаться
+            <svg class="send-btn__icon">
+              <use href="./images/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
