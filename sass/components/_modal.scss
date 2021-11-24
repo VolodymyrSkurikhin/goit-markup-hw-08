@@ -7,6 +7,11 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: 480px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  overflow-y: scroll;
 }
 .is-hidden {
   opacity: 0;
@@ -17,7 +22,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
   min-height: 581px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -26,6 +30,15 @@
   transform: scale(1) translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+  @media screen and (max-width: 480px) {
+    position: relative;
+  }
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 .is-hidden {
   .modal {
@@ -58,12 +71,17 @@
 }
 
 .modal-form__title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  margin-bottom: 12px;
-  color: var(--text-prime-color);
+  @media screen and (max-width: 768px) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--text-prime-color);
+  }
+  @media screen and (min-width: 768px) {
+    line-height: 1.15;
+  }
 }
 .modal-form__label {
   display: block;
@@ -172,8 +190,29 @@
   color: var(--accent-color);
 }
 .modal-form__button {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  // position: absolute;
+  // bottom: 40px;
+  // left: 50%;
+  margin-top: 30px;
+  // transform: translateX(-50%);
+}
+.modal-form {
+  text-align: center;
+}
+.modal-form__accept-text,
+.modal-form__accept-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--text-second-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+.modal-form__accept-link {
+  color: var(--accent-color);
 }

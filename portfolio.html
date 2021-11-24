@@ -14,20 +14,30 @@
 </head>
 <body>
   <!--Шапка сайта-->
-  <header class="header">
+  <header data-menu class="header">
     <div class="header-flex container">
       <nav class="header-flex">
         <a href="/" class="logo header__logo" lang="en">
           <span class="logo__start">Web</span>
           <span class="logo__end logo__end--header">Studio</span>
         </a>
+        <button type="button" class="button-menu button-menu-open" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./images/sprite.svg#menu-icon"></use>
+          </svg>
+        </button>
+        <button type="button" class="button-menu button-menu-close" data-menu-close>
+          <svg width="40" height="40">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
         <ul class="site-nav list">
           <li class="site-nav__item">
-            <a href="./index.html" class="site-nav__link site-nav__link--act">Портфолио
+            <a href="/" class="site-nav__link site-nav__link">Студия
             </a>
           </li>
           <li class="site-nav__item">
-            <a href="/" class="site-nav__link">Студия
+            <a href="./portfolio.html" class="site-nav__link site-nav__link--act">Портфолио
             </a>
           </li>
           <li class="site-nav__item">
@@ -38,7 +48,7 @@
       </nav>
       <ul class="mail-tel list">
         <li class="mail-tel__item">
-          <a href="mailto:info@devsudio.com" class="mail-tel__link">
+          <a href="mailto:info@devsudio.com" class="mail-tel__link mail-tel__link-email">
             <svg class="mail-tel__icon">
               <use href="./images/sprite.svg#icon-envelope"></use>
             </svg>
@@ -50,6 +60,20 @@
             <svg class="mail-tel__icon mail-tel__icon--size">
               <use href="./images/sprite.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a>
+        </li>
+      </ul>
+      <ul class="social-list-mobile list">
+        <li class="social-list-mobile__item">
+          <a href="" class="social-list-mobile__link">Instagram</a>
+        </li>
+        <li class="social-list-mobile__item">
+          <a href="" class="social-list-mobile__link">Twitter</a>
+        </li>
+        <li class="social-list-mobile__item">
+          <a href="" class="social-list-mobile__link">Facebook</a>
+        </li>
+        <li class="social-list-mobile__item">
+          <a href="" class="social-list-mobile__link">LinkedIn</a>
         </li>
       </ul>
     </div>
@@ -81,7 +105,21 @@
           <li class="project-portf__item">
           <a href="" class="project-portf__link">
             <div class="project-portf__overlay">
-              <img src="./images/techno.jpg" alt="лидеры технокряка" width="370">
+              <picture>
+                <source media="(min-width:1200px)" srcset="../images/projects/works-1-desktop.webp,
+                                    ../images/projects/works-1-desktop@2x.webp 2x" type="image/webp" />
+                <source media="(min-width:1200px)" srcset="../images/projects/works-1-desktop.jpg,
+                                    ../images/projects/works-1-desktop@2x.jpg 2x" />
+                <source media="(min-width:768px)" srcset="../images/projects/works-1-tablet.webp,
+                                      ../images/projects/works-1-tablet@2x.webp 2x" type="image/webp" />
+                <source media="(min-width:768px)" srcset="../images/projects/works-1-tablet.jpg,
+                                      ../images/projects/works-1-tablet@2x.jpg 2x" />
+                <source media="(max-width:767px)" srcset="../images/projects/works-1.webp,
+                                    ../images/projects/works-1@2x.webp 2x" type="image/webp" />
+                <source media="(max-width:767px)" srcset="../images/projects/works-1.jpg,
+                                    ../images/projects/works-1@2x.jpg 2x" />
+                <img src="../images/projects/works-1.jpg" alt="Технокряк">
+              </picture>
               <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, recusandae quos! Deserunt, ut! Distinctio voluptatibus libero dolorum ullam, odit ut veritatis quo optio vel similique repellendus voluptate quisquam doloremque perspiciatis!
               </p>
             </div>
@@ -94,7 +132,21 @@
           <li class="project-portf__item">
             <a href="" class="project-portf__link">
               <div class="project-portf__overlay">
-                <img src="./images/no-vs-gs.jpg" alt="баскетболисты" width="370">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-2-desktop.webp,
+                                                    ../images/projects/works-2-desktop@2x.webp 2x" type="image/webp" />
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-2-desktop.jpg,
+                                                    ../images/projects/works-2-desktop@2x.jpg 2x" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-2-tablet.webp,
+                                                      ../images/projects/works-2-tablet@2x.webp 2x" type="image/webp" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-2-tablet.jpg,
+                                                      ../images/projects/works-2-tablet@2x.jpg 2x" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-2.webp,
+                                                    ../images/projects/works-2@2x.webp 2x" type="image/webp" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-2.jpg,
+                                                    ../images/projects/works-2@2x.jpg 2x" />
+                  <img src="../images/projects/works-2.jpg" alt="Баскетболисты">
+                </picture>
                 <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
                 </p>
               </div>
@@ -107,7 +159,22 @@
           <li class="project-portf__item">
             <a href="" class="project-portf__link">
               <div class="project-portf__overlay">
-                <img src="./images/seafood.jpg" alt="логотип-ресторана" width="370">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-3-desktop.webp,
+                                                                    ../images/projects/works-3-desktop@2x.webp 2x" type="image/webp" />
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-3-desktop.jpg,
+                                                                    ../images/projects/works-3-desktop@2x.jpg 2x" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-3-tablet.webp,
+                                                                      ../images/projects/works-3-tablet@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-3-tablet.jpg,
+                                                                      ../images/projects/works-3-tablet@2x.jpg 2x" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-3.webp,
+                                                                    ../images/projects/works-3@2x.webp 2x" type="image/webp" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-3.jpg,
+                                                                    ../images/projects/works-3@2x.jpg 2x" />
+                  <img src="../images/projects/works-3.jpg" alt="Логотип ресторана">
+                </picture>
                 <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
                 </p>
               </div>
@@ -120,7 +187,24 @@
           <li class="project-portf__item">
             <a href="" class="project-portf__link">
               <div class="project-portf__overlay">
-                <img src="./images/prime.jpg" alt="наушники" width="370">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-4-desktop.webp,
+                                                                                    ../images/projects/works-4-desktop@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-4-desktop.jpg,
+                                                                                    ../images/projects/works-4-desktop@2x.jpg 2x" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-4-tablet.webp,
+                                                                                      ../images/projects/works-4-tablet@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-4-tablet.jpg,
+                                                                                      ../images/projects/works-4-tablet@2x.jpg 2x" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-4.webp,
+                                                                                    ../images/projects/works-4@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-4.jpg,
+                                                                                    ../images/projects/works-4@2x.jpg 2x" />
+                  <img src="../images/projects/works-4.jpg" alt="Наушники">
+                </picture>
                 <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
                 </p>
               </div>
@@ -133,7 +217,24 @@
           <li class="project-portf__item">
             <a href="" class="project-portf__link">
               <div class="project-portf__overlay">
-                <img src="./images/boxes.jpg" alt="две-коробки" width="370">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-5-desktop.webp,
+                                                                                    ../images/projects/works-5-desktop@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-5-desktop.jpg,
+                                                                                    ../images/projects/works-5-desktop@2x.jpg 2x" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-5-tablet.webp,
+                                                                                      ../images/projects/works-5-tablet@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-5-tablet.jpg,
+                                                                                      ../images/projects/works-5-tablet@2x.jpg 2x" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-5.webp,
+                                                                                    ../images/projects/works-5@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-5.jpg,
+                                                                                    ../images/projects/works-5@2x.jpg 2x" />
+                  <img src="../images/projects/works-5.jpg" alt="Коробки">
+                </picture>
                 <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
                 </p>
               </div>
@@ -146,7 +247,24 @@
           <li class="project-portf__item">
             <a href="" class="project-portf__link">
               <div class="project-portf__overlay">
-                <img src="./images/inspiration.jpg" alt="монитор" width="370">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-6-desktop.webp,
+                                                                                    ../images/projects/works-6-desktop@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-6-desktop.jpg,
+                                                                                    ../images/projects/works-6-desktop@2x.jpg 2x" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-6-tablet.webp,
+                                                                                      ../images/projects/works-6-tablet@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-6-tablet.jpg,
+                                                                                      ../images/projects/works-6-tablet@2x.jpg 2x" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-6.webp,
+                                                                                    ../images/projects/works-6@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-6.jpg,
+                                                                                    ../images/projects/works-6@2x.jpg 2x" />
+                  <img src="../images/projects/works-6.jpg" alt="Страница на экране">
+                </picture>
                 <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
                 </p>
               </div>
@@ -159,7 +277,24 @@
           <li class="project-portf__item">
             <a href="" class="project-portf__link">
               <div class="project-portf__overlay">
-                <img src="./images/edition.jpg" alt="книга" width="370">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-7-desktop.webp,
+                                                                                    ../images/projects/works-7-desktop@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-7-desktop.jpg,
+                                                                                    ../images/projects/works-7-desktop@2x.jpg 2x" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-7-tablet.webp,
+                                                                                      ../images/projects/works-7-tablet@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-7-tablet.jpg,
+                                                                                      ../images/projects/works-7-tablet@2x.jpg 2x" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-7.webp,
+                                                                                    ../images/projects/works-7@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-7.jpg,
+                                                                                    ../images/projects/works-7@2x.jpg 2x" />
+                  <img src="../images/projects/works-7.jpg" alt="Журнал">
+                </picture>
                 <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
                 </p>
               </div>
@@ -172,7 +307,24 @@
           <li class="project-portf__item">
             <a href="" class="project-portf__link">
               <div class="project-portf__overlay">
-                <img src="./images/lab.jpg" alt="этикетка" width="370">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-8-desktop.webp,
+                                                                                    ../images/projects/works-8-desktop@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-8-desktop.jpg,
+                                                                                    ../images/projects/works-8-desktop@2x.jpg 2x" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-8-tablet.webp,
+                                                                                      ../images/projects/works-8-tablet@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-8-tablet.jpg,
+                                                                                      ../images/projects/works-8-tablet@2x.jpg 2x" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-8.webp,
+                                                                                    ../images/projects/works-8@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-8.jpg,
+                                                                                    ../images/projects/works-8@2x.jpg 2x" />
+                  <img src="../images/projects/works-8.jpg" alt="Лейбл">
+                </picture>
                 <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
                 </p>
               </div>
@@ -185,7 +337,24 @@
           <li class="project-portf__item">
             <a href="" class="project-portf__link">
               <div class="project-portf__overlay">
-                <img src="./images/business.jpg" alt="ноутбук" width="370">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-9-desktop.webp,
+                                                                                    ../images/projects/works-9-desktop@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:1200px)" srcset="../images/projects/works-9-desktop.jpg,
+                                                                                    ../images/projects/works-9-desktop@2x.jpg 2x" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-9-tablet.webp,
+                                                                                      ../images/projects/works-9-tablet@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(min-width:768px)" srcset="../images/projects/works-9-tablet.jpg,
+                                                                                      ../images/projects/works-9-tablet@2x.jpg 2x" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-9.webp,
+                                                                                    ../images/projects/works-9@2x.webp 2x"
+                    type="image/webp" />
+                  <source media="(max-width:767px)" srcset="../images/projects/works-9.jpg,
+                                                                                    ../images/projects/works-9@2x.jpg 2x" />
+                  <img src="../images/projects/works-9.jpg" alt="Приложение на ноутбуке">
+                </picture>
                 <p class="project-portf__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, distinctio!
                 </p>
               </div>
@@ -208,8 +377,9 @@
         <address class="address">
           <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
           <ul class="footer-list list">
-            <li><a href="mailto:info@example.com" class="footer-list__item">info@example.com</a></li>
-            <li><a href="tel:+380991111111" class="footer-list__item">+38 099 111 11 11</a></li>
+            <li class="footer-list__item"><a href="mailto:info@example.com" class="footer-list__item">info@example.com</a>
+            </li>
+            <li class="footer-list__item"><a href="tel:+380991111111" class="footer-list__item">+38 099 111 11 11</a></li>
           </ul>
         </address>
       </div>
@@ -260,6 +430,6 @@
       </div>
     </div>
   </footer>
+  <script src="./js/mobile-menu.js"></script>
 </body>
-
 </html>
