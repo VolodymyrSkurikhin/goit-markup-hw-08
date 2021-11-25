@@ -6,6 +6,7 @@
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
+  min-width: 320px;
 }
 
 .site-nav__item:not(:last-child) {
@@ -202,7 +203,6 @@
       align-self: end;
     }
     .header-flex.container {
-      // TODO: add proper class for top level flex box
       justify-content: space-between;
       height: 100%;
       padding-left: 40px;

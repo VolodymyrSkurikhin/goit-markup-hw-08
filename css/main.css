@@ -59,6 +59,7 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-width: 320px;
 }
 
 @media screen and (min-width: 480px) {
@@ -126,6 +127,7 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
+  min-width: 320px;
 }
 
 .site-nav__item:not(:last-child) {
@@ -397,7 +399,6 @@ body {
   background-position: center;
   background-size: cover;
   min-width: 320px;
-  max-width: 480px;
   height: 400px;
 }
 
@@ -410,7 +411,6 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url(../images/hero/hero-tablet.jpg);
-    max-width: 768px;
     padding: 118px 0;
   }
 }
@@ -424,7 +424,6 @@ body {
 @media screen and (min-width: 1200px) {
   .hero {
     background-image: url(../images/hero/hero-desktop.jpg);
-    max-width: 1200px;
     height: 600px;
     padding: 200px 0;
   }
@@ -863,6 +862,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-right {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .footer-right {
     display: flex;
@@ -872,9 +877,11 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer-right {
-    margin-top: 60px;
+    display: block;
+    text-align: center;
+    min-width: 100%;
   }
 }
 
@@ -913,14 +920,6 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .footer-invite-thumb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 1199px) {
   .footer-invite-email {
     margin-bottom: 20px;
   }
@@ -931,6 +930,7 @@ body {
   padding-bottom: 60px;
   margin: 0 auto;
   background-color: var(--black-footer-color);
+  min-width: 320px;
 }
 
 .address__text {
@@ -990,6 +990,22 @@ body {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-invite-thumb {
+    display: block;
+    text-align: center;
+    min-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-invite-thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer-invite-thumb {
     display: flex;
@@ -1006,6 +1022,7 @@ body {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
 }
 
 .send-btn {
@@ -1015,6 +1032,13 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .send-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .send-btn__icon {
   width: 24px;
   height: 24px;
@@ -1022,21 +1046,32 @@ body {
 }
 
 .footer-invite-email {
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
   background-color: var(--black-footer-color);
-  margin-right: 12px;
-  padding-left: 16px;
   resize: none;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-invite-email {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-invite-email {
     width: 450px;
     margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-invite-email {
+    margin-right: 12px;
+    padding-left: 16px;
+    width: 358px;
   }
 }
 
